@@ -1,11 +1,25 @@
-# ARIA Query
+# NOTICE OF DERIVATIVE WORK
 
-![CI](https://github.com/A11yance/aria-query/workflows/CI/badge.svg)
+Aria Query is licensed under Apache 2.0 which requires attribution of derivative work.
+
+This project (aria-query) is a derivative work of <https://github.com/A11yance/aria-query> published to
+allow for use with ESM. This project is not associated with aria-query, and will cease to exist
+when aria-query is ESM compatible.
+
+## Why fork?
+
+To provide entrypoints for both ESM and CJS, allowing the package to be used without a bundler, or without CJS -> ESM transforms.
+
+Full context: <https://github.com/A11yance/aria-query/pull/485>
+
+## ARIA Query
+
+![CI](https://github.com/konnorrogers/aria-query-esm/workflows/CI/badge.svg)
 
 Programmatic access to the [WAI-ARIA 1.2 Roles Model](https://www.w3.org/TR/wai-aria-1.2/#roles).
 This package tracks the W3C Recommendation (last update: 6 June 2023).
 
-CDN URL: <https://unpkg.com/aria-query>
+CDN URL: <https://unpkg.com/aria-query-esm>
 
 ## Building the `src/etc` files
 
@@ -39,7 +53,7 @@ These methods are available on each export from the module. The typing here in t
 ### Roles
 
 ```javascript
-import { roles } from 'aria-query';
+import { roles } from 'aria-query-esm';
 ```
 
 A map of role names to the role definition. For example:
@@ -90,7 +104,7 @@ let alertRole = roles.get('alert');
 ### Elements to Roles
 
 ```javascript
-import { elementRoles } from 'aria-query';
+import { elementRoles } from 'aria-query-esm';
 ```
 
 HTML Elements with inherent roles are mapped to those roles. In the case of an element like `<input>`, the element often requires a `type` attribute to map to an ARIA role.
@@ -147,7 +161,7 @@ The roles are provided in a [Set](https://developer.mozilla.org/en-US/docs/Web/J
 ### Role to element
 
 ```javascript
-import { roleElements } from 'aria-query';
+import { roleElements } from 'aria-query-esm';
 ```
 
 ARIA roles are mapped to the HTML Elements with the same inherent role. Some roles, such as `columnheader` are only mapped to an HTML element that expresses specific attributes. In the case of `<input>`, the element often requires a `type` attribute to map to an ARIA role.
