@@ -1,7 +1,6 @@
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
-import builtins from 'rollup-plugin-node-builtins';
 import glob from 'glob';
 import * as path from "path"
 
@@ -16,7 +15,6 @@ glob
   })
 
 const plugins = [
-  builtins(),
   nodeResolve(),
   commonjs({
 	  include: /\/node_modules\//,
